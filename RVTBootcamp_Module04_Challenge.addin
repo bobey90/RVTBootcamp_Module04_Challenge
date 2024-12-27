@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>RVTBootcamp_Module04_Challenge - Command 1</Text>
+    <Description>Some description</Description>
+    <Assembly>RVTBootcamp_Module04_Challenge\RVTBootcamp_Module04_Challenge.dll</Assembly>
+    <FullClassName>RVTBootcamp_Module04_Challenge.Command1</FullClassName>
+    <ClientId>3085f5b4-0491-41f7-8b91-025eefcdc474</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>RVTBootcamp_Module04_Challenge - Command 2</Text>
+    <Description>Some description</Description>
+    <Assembly>RVTBootcamp_Module04_Challenge\RVTBootcamp_Module04_Challenge.dll</Assembly>
+    <FullClassName>RVTBootcamp_Module04_Challenge.Command2</FullClassName>
+    <ClientId>3c24d1bf-6701-4ed3-b1cf-ad05c32b304f</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>RVTBootcamp_Module04_Challenge</Name>
+    <Assembly>RVTBootcamp_Module04_Challenge\RVTBootcamp_Module04_Challenge.dll</Assembly>
+    <FullClassName>RVTBootcamp_Module04_Challenge.App</FullClassName>
+    <ClientId>697c7db2-7eab-47ba-9d84-ef65a498df5f</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+</RevitAddIns>
