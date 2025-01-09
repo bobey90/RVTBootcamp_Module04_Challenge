@@ -15,7 +15,16 @@ namespace RVTBootcamp_Module04_Challenge
 
             app.CreateRibbonTab(tabName);
 
-            
+            try
+            {
+                app.CreateRibbonTab(tabName);
+
+            }
+            catch (Exception error)
+            {
+                Debug.Print("Tab already exist. Using existing panel.");
+                Debug.Print(error.Message);
+            }
 
             RibbonPanel panel = app.CreateRibbonPanel(tabName, panelName);
 
@@ -31,6 +40,19 @@ namespace RVTBootcamp_Module04_Challenge
             PushButtonData buttonData9 = new PushButtonData("cmd9", "Tool 9", Assembly.GetExecutingAssembly().Location, "RVTBootcamp_Module04_Challenge.cmd9");
             PushButtonData buttonData10 = new PushButtonData("cmd10", "Tool 10", Assembly.GetExecutingAssembly().Location, "RVTBootcamp_Module04_Challenge.cmd10");
 
+            //6. Create push Button
+
+            PushButton button1 = panel.AddItem(buttonData1) as PushButton;
+            PushButton button2 = panel.AddItem(buttonData2) as PushButton;
+
+            //7. Add stackable buttons
+            panel.AddStackedItems(buttonData3, buttonData4, buttonData5);
+
+            //8. Add Split Button
+            SplitButtonData splitButtonData = new SplitButtonData("SplitButton", "Split\rButton");
+            SplitButton splitButton = panel.AddItem(splitButtonData) as SplitButton;
+            splitButton.AddPushButton(buttonData6);
+            splitButton.AddPushButton(buttonData7);
 
 
 
@@ -38,6 +60,25 @@ namespace RVTBootcamp_Module04_Challenge
 
 
             return Result.Succeeded;
+        }
+
+        private RibbonPanel CreateGetPanel(UIControlledApplication app, string tabName, string panelName1)
+        {
+            //look for panel in tab
+            foreach (RibbonPanel panel in app.GetRibbonPanels(tabName))
+            {
+                if (panel.Name == panelName1)
+                {
+                    return panel;
+                }
+            }
+
+            ////Panel not found, Create it
+            //RibbonPanel returnPanel = app.CreateRibbonPanel(tabName, panelName1);
+            //return returnPanel;
+
+            return app.CreateRibbonPanel(tabName, panelName1);
+
         }
 
         public Result OnShutdown(UIControlledApplication a)
@@ -59,7 +100,7 @@ namespace RVTBootcamp_Module04_Challenge
                 return image;
             }
         }
-	}
+	
 
         public byte[] ConvertBitmapToByteArray(Bitmap bitmap)
         {
@@ -69,12 +110,6 @@ namespace RVTBootcamp_Module04_Challenge
                 return memoryStream.ToArray();
             }
         }
-
-
-
-
-
-
 
     }
 
