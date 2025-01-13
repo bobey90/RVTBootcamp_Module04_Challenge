@@ -40,19 +40,31 @@ namespace RVTBootcamp_Module04_Challenge
             PushButtonData buttonData9 = new PushButtonData("cmd9", "Tool 9", Assembly.GetExecutingAssembly().Location, "RVTBootcamp_Module04_Challenge.cmd9");
             PushButtonData buttonData10 = new PushButtonData("cmd10", "Tool 10", Assembly.GetExecutingAssembly().Location, "RVTBootcamp_Module04_Challenge.cmd10");
 
-            //Bitmap myBitmap = Properties.Resources.Green_32; // loading a Bitmap from resources
-            ////byte[] byteArray = ConvertBitmapToByteArray(myBitmap);
+            //5. convert images
 
-            //Bitmap myBitmap2 = Properties.Resources.Green_16; 
-            ////byte[] byteArray2 = ConvertBitmapToByteArray(myBitmap2);
+            //Bitmap myBitmap = Properties.Resources.Green_32; // Example of loading a Bitmap from resources
+            //byte[] byteArray = ConvertBitmapToByteArray(myBitmap);
 
-            //Bitmap myBitmap3 = Properties.Resources.Blue_32; 
-            ////byte[] byteArray3 = ConvertBitmapToByteArray(myBitmap3);
+            //Bitmap myBitmap2 = Properties.Resources.Green_16; // Example of loading a Bitmap from resources
+            //byte[] byteArray2 = ConvertBitmapToByteArray(myBitmap2);
 
-            //Bitmap myBitmap4 = Properties.Resources.Blue_16; 
-            ////byte[] byteArray4 = ConvertBitmapToByteArray(myBitmap4);
+            //Bitmap myBitmap3 = Properties.Resources.Blue_32; // Example of loading a Bitmap from resources
+            //byte[] byteArray3 = ConvertBitmapToByteArray(myBitmap3);
 
-            
+            //Bitmap myBitmap4 = Properties.Resources.Blue_16; // Example of loading a Bitmap from resources
+            //byte[] byteArray4 = ConvertBitmapToByteArray(myBitmap4);
+
+
+
+
+            //5a. Add images
+
+            //buttonData1.LargeImage = ConvertToImageSource(byteArray);
+            //buttonData1.Image = ConvertToImageSource(byteArray2);
+            //buttonData2.LargeImage = ConvertToImageSource(byteArray3);
+            //buttonData2.Image = ConvertToImageSource(byteArray4);
+
+
 
             PushButton button1 = panel.AddItem(buttonData1) as PushButton;
             PushButton button2 = panel.AddItem(buttonData2) as PushButton;
